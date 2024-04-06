@@ -1,0 +1,62 @@
+<!-- result.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyN1WOAqI"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>ML Predictions</title>
+
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin: 50px auto;
+    width: 80%;
+}
+
+h1 {
+    font-weight: bold;
+    color: #444;
+    text-align: center;
+    margin-bottom: 50px;
+}
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1>Placement Prediction Result</h1>
+        <div class="alert alert-success" role="alert">
+            The probability of student getting placed is: <strong>{{ probability }}</strong>
+        </div>
+        <!-- You can add more details or styling here -->
+    </div>
+
+    <!-- Bootstrap JS and Popper.js (for dropdowns) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-eMNBIjGjkJlFz+/KG7geUJo7usdpaZ8Lus9nUBaQqJ6fn/jWBLqI3cCVL0P1p2I"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyN1WOAqI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

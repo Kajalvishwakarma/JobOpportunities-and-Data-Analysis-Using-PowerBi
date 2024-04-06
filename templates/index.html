@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"
+/>
+
+<!-- Custom CSS -->
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+    }
+
+    .container {
+        margin: 50px auto;
+        max-width: 600px;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        width: 80%; /* Added to make the form smaller */
+    }
+
+    h1 {
+        font-weight: bold;
+        color: #444;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-weight: bold;
+        color: #444;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    select,
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #3e8e41;
+    }
+</style>
+    </head>
+
+    <body>
+        <header>
+            <!-- place navbar here -->
+        </header>
+        <main>
+            <main>
+                <div
+                    class="container"
+                >
+                <div
+                class="container-fluid"
+            >
+                <h1>Student Placement Prediction</h1>
+                <form action="/predict" method="post">
+                    <div class="mb-3">
+                        <label for="gender" class="form-label">Gender</label>
+                        <select class="form-control" id="gender" name="gender" required>
+                            <option value="M">Male</option>
+                            <option value="F">Female</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="specialisation">Specialisation:</label>
+                        <select class="form-control" id="specialisation" name="specialisation" required>
+                            <option value="Mkt&Fin">Mkt&Fin</option>
+                            <option value="Mkt&HR">Mkt&HR</option>
+                        </select>
+                    </div>
+
+                    <!-- Undergrad Degree Dropdown -->
+                    <div class="form-group">
+                        <label for="undergrad_degree">Undergrad Degree:</label>
+                        <select class="form-control" id="undergrad_degree" name="undergrad_degree" required>
+                            <option value="Comm&Mgmt">Comm&Mgmt</option>
+                            <option value="Sci&Tech">Sci&Tech</option>
+                            <option value="Others">Others</option>
+                        </select>
+                    </div>
+
+                    <!-- HSC Board Dropdown -->
+                    <div class="form-group">
+                        <label for="hsc_board">HSC Board:</label>
+                        <select class="form-control" id="hsc_board" name="hsc_board" required>
+                            <option value="Others">Others</option>
+                            <option value="Central">Central</option>
+                        </select>
+                    </div>
+
+                    <!-- HSC Subject Dropdown -->
+                    <div class="form-group">
+                        <label for="hsc_subject">HSC Subject:</label>
+                        <select class="form-control" id="hsc_subject" name="hsc_subject" required>
+                            <option value="Commerce">Commerce</option>
+                            <option value="Science">Science</option>
+                            <option value="Arts">Arts</option>
+                        </select>
+                    </div>
+
+                    <!-- SSC Percentage -->
+                    <div class="form-group">
+                        <label for="ssc_percentage">SSC Percentage:</label>
+                        <input type="text" class="form-control" id="ssc_percentage" name="ssc_percentage" required>
+                    </div>
+
+                    <!-- HSC Percentage -->
+                    <div class="form-group">
+                        <label for="hsc_percentage">HSC Percentage:</label>
+                        <input type="text" class="form-control" id="hsc_percentage" name="hsc_percentage" required>
+                    </div>
+
+                    <!-- Degree Percentage -->
+                    <div class="form-group">
+                        <label for="degree_percentage">Degree Percentage:</label>
+                        <input type="text" class="form-control" id="degree_percentage" name="degree_percentage" required>
+                    </div>
+
+                    <!-- Work Experience Dropdown -->
+                    <div class="form-group">
+                        <label for="work_experience">Work Experience:</label>
+                        <select class="form-control" id="work_experience" name="work_experience" required>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+
+                    <!-- Emp Test Percentage -->
+                    <div class="form-group">
+                        <label for="emp_test_percentage">Emp Test Percentage:</label>
+                        <input type="text" class="form-control" id="emp_test_percentage" name="emp_test_percentage" required>
+                    </div>
+
+                    <!-- MBA Percent -->
+                    <div class="form-group">
+                        <label for="mba_percent">MBA Percent:</label>
+                        <input type="text" class="form-control" id="mba_percent" name="mba_percent" required>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <input type="submit" class="btn btn-primary">
+
+                </form>
+            </div>
+                </div>
+
+
+            </main>
+        </main>
+        <footer>
+            <!-- place footer here -->
+        </footer>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
+
+
